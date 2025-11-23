@@ -1,0 +1,13 @@
+# files to be ignored by git
+node_modules/
+.env
+.DS_Store
+logs/
+*.log
+
+# Ignore build files
+dist/
+build/
+
+package-lock.json
+npm-debug.log*

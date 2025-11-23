@@ -1,0 +1,88 @@
+####
+GET http://localhost:3000/
+
+
+#####
+POST http://localhost:3000/user/register
+Content-Type: application/json
+
+{
+  "name": "Pushkaraj",
+  "email": "pushkaraj@example.com",
+  "password": "password123"
+}
+
+
+#####
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+  "email": "PJ@gmail.com",
+  "password": "332"
+}
+ 
+######
+GET http://localhost:3000/user/profile
+Content-Type: application/json
+Authorization: Bearer {eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MWNhZDlhNDMzOGE3NzI5ZDAxYWRkOSIsImlhdCI6MTc2MzQ4NzEzNiwiZXhwIjoxNzYzNDkwNzM2fQ.xEV7dwHu2d9FpABFBiHm-c3epNhjTkNKuzDID_sbBak}
+
+#####
+POST http://localhost:3000/user/logout
+Content-Type: application/json
+Authorization: Bearer {eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MWNhZDlhNDMzOGE3NzI5ZDAxYWRkOSIsImlhdCI6MTc2MzQ4NzEzNiwiZXhwIjoxNzYzNDkwNzM2fQ.xEV7dwHu2d9FpABFBiHm-c3epNhjTkNKuzDID_sbBak}
+
+
+##### 
+#captain service requests
+POST http://localhost:3002/register 
+Content-Type: application/json
+
+{
+  "name": "rider1",
+  "email": "rider1@example.com",
+  "password": "shield123"
+}
+
+#####
+POST http://localhost:3002/login
+Content-Type: application/json
+
+{
+  "email": "batman@example.com",
+  "password": "shield123"
+}
+
+######
+GET http://localhost:3000/captain/profile
+Content-Type: application/json
+Authorization: Bearer {eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MWNhZTFlZGQ4YzMxMWUyNTgxMWVjMSIsImlhdCI6MTc2MzQ5MDcyMCwiZXhwIjoxNzYzNDk0MzIwfQ.sQJ6uoJz5rkCLGnzK5MXGGto6jZQ5Pb46_GH2nJLM84}
+
+#####
+POST http://localhost:3002/logout
+Content-Type: application/json
+Authorization: Bearer {eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MWNhZTFlZGQ4YzMxMWUyNTgxMWVjMSIsImlhdCI6MTc2MzQ4NzI2MiwiZXhwIjoxNzYzNDkwODYyfQ.JSazFad__eB2emgyWsyNcHUee32rGITeZP9KIEU_MKI}
+
+#####
+#captain service - update-Availability
+PATCH http://localhost:3002/toggle-availability
+Content-Type: application/json
+Authorization: Bearer {eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MWNiODUzMGU1N2Y3NjQ4MWU2NWQwNyIsImlhdCI6MTc2MzQ4OTg3NSwiZXhwIjoxNzYzNDkzNDc1fQ.ks5vlH9gOaLgUs_Bbov6DqPExsoo3GxtkcYVuh-5tTM}
+
+{
+  "isAavilable": true
+}
+
+
+
+#####
+#ride service - create ride
+POST http://localhost:3003/create-ride
+Content-Type: application/json
+Authorization: Bearer {eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MWNhZDlhNDMzOGE3NzI5ZDAxYWRkOSIsImlhdCI6MTc2MzQ4ODU1MCwiZXhwIjoxNzYzNDkyMTUwfQ.D_1GmMOQ1ZgWRtBsF92OSmqxQVoxtbyONeRoS4c8DNU}
+
+{
+   
+  "pickup": "123 Main St",
+  "destination": "456 Elm St"
+}
